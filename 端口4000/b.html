@@ -1,0 +1,17 @@
+<html>
+  <head></head>
+  <body></body>
+  <script>
+    window.onmessage = function (e) {
+      console.log(e.data); //我爱你
+      console.log(e.origin);
+      console.log(e.source);
+      console.log(this);
+      console.log(e);
+      //   console.log(e.source.origin);
+      if (e.origin) {
+        e.source.postMessage("我不爱你", e.origin);
+      }
+    };
+  </script>
+</html>
